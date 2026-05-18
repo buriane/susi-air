@@ -32,13 +32,15 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
   background: $color-bg-page;
 
   &__content {
     flex: 1;
     padding: 16px;
-    padding-bottom: 80px;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 </style>

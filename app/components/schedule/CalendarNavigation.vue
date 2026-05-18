@@ -67,7 +67,7 @@ const monthLabel = computed(() => format(props.currentMonth, 'MMMM yyyy'))
     transition: background 0.2s ease, transform 0.15s ease;
 
     &:hover {
-      background: darken(#F5F6F8, 4%);
+      background: color.adjust(#F5F6F8, $lightness: -4%);
     }
 
     &:active {

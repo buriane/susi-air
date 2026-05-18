@@ -1,0 +1,15 @@
+{
+    "name": "Susi Air Pilot Companion",
+    "short_name": "Susi Air",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F5F6F8",
+    "theme_color": "#0E2138",
+    "icons": [
+        {
+            "src": "/susiair-logo.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

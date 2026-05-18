@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { format } from 'date-fns'
-import { X, CalendarDays } from 'lucide-vue-next'
+import { computed } from "vue";
+import { format } from "date-fns";
+import { X, CalendarDays } from "lucide-vue-next";
 
 const props = defineProps<{
-  date: Date
-}>()
+  date: Date;
+}>();
 
 const emit = defineEmits<{
-  close: []
-}>()
+  close: [];
+}>();
 
-const formattedDate = computed(() => format(props.date, 'EEEE, MMMM d, yyyy'))
+const formattedDate = computed(() => format(props.date, "EEEE, MMMM d, yyyy"));
 </script>
 
 <template>
@@ -103,7 +103,7 @@ const formattedDate = computed(() => format(props.date, 'EEEE, MMMM d, yyyy'))
     transition: background 0.15s ease;
 
     &:hover {
-      background: darken(#F5F6F8, 6%);
+      background: color.adjust(#f5f6f8, $lightness: -6%);
     }
   }
 
@@ -151,12 +151,20 @@ const formattedDate = computed(() => format(props.date, 'EEEE, MMMM d, yyyy'))
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 </style>

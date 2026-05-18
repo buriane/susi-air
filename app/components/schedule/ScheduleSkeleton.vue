@@ -51,9 +51,9 @@
 @mixin skeleton-pulse {
   background: linear-gradient(
     90deg,
-    darken($color-bg-page, 2%) 25%,
-    darken($color-bg-page, 5%) 50%,
-    darken($color-bg-page, 2%) 75%
+    color.adjust($color-bg-page, $lightness: -2%) 25%,
+    color.adjust($color-bg-page, $lightness: -5%) 50%,
+    color.adjust($color-bg-page, $lightness: -2%) 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
