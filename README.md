@@ -38,6 +38,23 @@ npm run preview
 npx vitest run
 ```
 
+Latest test run:
+
+```bash
+PS D:\webApp\susi-air-app> npx vitest run
+
+ RUN  v4.1.6 D:/webApp/susi-air-app
+
+ ✓ app/composables/__tests__/useToday.test.ts (1 test) 5ms
+ ✓ app/composables/__tests__/useExpiryStatus.test.ts (3 tests) 7ms
+ ✓ app/composables/__tests__/useRollingHours.test.ts (4 tests) 6ms
+
+ Test Files  3 passed (3)
+    Tests  8 passed (8)
+  Start at  16:11:29
+  Duration  2.88s (transform 955ms, setup 0ms, import 4.20s, tests 19ms, environment 0ms)
+```
+
 ---
 
 ## Tech Stack & Why
