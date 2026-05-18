@@ -13,8 +13,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'Home', icon: Home, to: '/home' },
   { label: 'Schedule', icon: Calendar, to: '/schedule' },
-  { label: 'Logbook', icon: BookOpen, placeholder: true },
-  { label: 'More', icon: MoreHorizontal, placeholder: true },
+  { label: 'Logbook', icon: BookOpen, to: '/logbook' },
+  { label: 'More', icon: MoreHorizontal, to: '/more' },
 ]
 
 const isActive = (item: NavItem): boolean => {

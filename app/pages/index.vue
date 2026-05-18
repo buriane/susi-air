@@ -1,25 +1,25 @@
 <script setup lang="ts">
 definePageMeta({
   layout: false,
-})
+});
 
-const router = useRouter()
+const router = useRouter();
 
-const username = ref('')
-const password = ref('')
-const showPassword = ref(false)
-const isSubmitting = ref(false)
+const username = ref("");
+const password = ref("");
+const showPassword = ref(false);
+const isSubmitting = ref(false);
 
 function togglePasswordVisibility(): void {
-  showPassword.value = !showPassword.value
+  showPassword.value = !showPassword.value;
 }
 
 async function handleSubmit(): Promise<void> {
-  isSubmitting.value = true
+  isSubmitting.value = true;
 
-  await new Promise((resolve) => setTimeout(resolve, 600))
+  await new Promise((resolve) => setTimeout(resolve, 600));
 
-  await router.push('/home')
+  await router.push("/home");
 }
 </script>
 
@@ -119,7 +119,9 @@ async function handleSubmit(): Promise<void> {
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                <path
+                  d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                />
                 <circle cx="12" cy="12" r="3" />
               </svg>
               <!-- Eye off icon (hide) -->
@@ -135,9 +137,13 @@ async function handleSubmit(): Promise<void> {
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
+                <path
+                  d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"
+                />
                 <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
-                <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" />
+                <path
+                  d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"
+                />
                 <path d="m2 2 20 20" />
               </svg>
             </button>
@@ -315,7 +321,10 @@ async function handleSubmit(): Promise<void> {
     border: 1.5px solid transparent;
     border-radius: $radius-card;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
 
     &::placeholder {
       color: rgba($color-text-secondary, 0.6);
@@ -358,7 +367,9 @@ async function handleSubmit(): Promise<void> {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: color 0.2s ease, background-color 0.2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
 
     &:hover {
       color: $color-navy;
