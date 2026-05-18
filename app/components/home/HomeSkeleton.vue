@@ -89,18 +89,20 @@
 </template>
 
 <style lang="scss" scoped>
-.skeleton {
-  background: rgba($color-text-secondary, 0.12);
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    darken($color-bg-page, 2%) 25%,
+    darken($color-bg-page, 5%) 50%,
+    darken($color-bg-page, 2%) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }
 
 .home-skeleton {
