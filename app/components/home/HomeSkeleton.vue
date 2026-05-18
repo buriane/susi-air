@@ -6,13 +6,13 @@
     <!-- Upcoming Flight Skeleton -->
     <section class="home-skeleton__section">
       <div class="home-skeleton__title skeleton" style="width: 160px;" />
-      <BaseCard class="home-skeleton__card" style="height: 164px;">
+      <BaseCard class="home-skeleton__card" style="height: 178px;">
         <div class="home-skeleton__header">
           <div class="skeleton" style="width: 80px; height: 24px; border-radius: 6px;" />
           <div class="skeleton" style="width: 120px; height: 16px; border-radius: 4px;" />
         </div>
         <div class="home-skeleton__body">
-          <div class="skeleton" style="width: 100%; height: 48px; border-radius: 8px;" />
+          <div class="skeleton" style="width: 100%; height: 62px; border-radius: 8px;" />
         </div>
         <div class="home-skeleton__footer">
           <div class="skeleton" style="width: 60px; height: 20px; border-radius: 4px;" />
@@ -41,6 +41,29 @@
           </BaseCard>
         </div>
       </div>
+    </section>
+
+    <!-- Hours to Limit Skeleton -->
+    <section class="home-skeleton__section">
+      <div class="home-skeleton__title skeleton" style="width: 150px;" />
+      <div class="home-skeleton__limit-grid">
+        <BaseCard v-for="i in 4" :key="i" class="home-skeleton__limit-card">
+          <div class="skeleton" style="width: 50px; height: 12px; border-radius: 4px;" />
+          <div class="skeleton" style="width: 70px; height: 22px; border-radius: 4px; margin-top: 8px;" />
+          <div class="skeleton" style="width: 100%; height: 6px; border-radius: 3px; margin-top: 8px;" />
+          <div style="display: flex; justify-content: space-between; margin-top: 6px;">
+            <div class="skeleton" style="width: 40px; height: 11px; border-radius: 3px;" />
+            <div class="skeleton" style="width: 30px; height: 10px; border-radius: 3px;" />
+          </div>
+        </BaseCard>
+      </div>
+      <BaseCard class="home-skeleton__chart-card">
+        <div class="skeleton" style="width: 140px; height: 16px; border-radius: 4px;" />
+        <div class="skeleton" style="width: 100%; height: 180px; border-radius: 8px; margin-top: 16px;" />
+        <div class="home-skeleton__toggles">
+          <div v-for="i in 5" :key="i" class="skeleton" style="width: 48px; height: 32px; border-radius: 20px;" />
+        </div>
+      </BaseCard>
     </section>
 
     <!-- Document Status Skeleton -->
@@ -185,6 +208,32 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 6px;
+  }
+
+  &__limit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  &__limit-card {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__chart-card {
+    padding: 16px 12px;
+  }
+
+  &__toggles {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+    background: rgba($color-text-secondary, 0.04);
+    border-radius: $radius-pill;
+    padding: 4px;
   }
 }
 </style>

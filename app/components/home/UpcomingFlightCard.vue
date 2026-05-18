@@ -7,10 +7,12 @@ const today = useToday()
 
 const flight = {
   date: today,
-  departure: 'HLP',
-  departureCity: 'Halim Perdanakusuma',
-  arrival: 'CJN',
-  arrivalCity: 'Cijulang Nusawiru',
+  departure: 'WIHH',
+  departureCity: 'Jakarta',
+  departureAirport: 'Halim Perdanakusuma',
+  arrival: 'WICN',
+  arrivalCity: 'Pangandaran',
+  arrivalAirport: 'Nusawiru',
   departureTime: '08:30',
   arrivalTime: '10:15',
   aircraft: 'PK-BRM',
@@ -43,6 +45,7 @@ const formattedDate = computed(() => format(flight.date, 'EEEE, dd MMMM yyyy'))
         <div class="upcoming-flight__airport">
           <span class="upcoming-flight__code">{{ flight.departure }}</span>
           <span class="upcoming-flight__city">{{ flight.departureCity }}</span>
+          <span class="upcoming-flight__airport-name">{{ flight.departureAirport }}</span>
         </div>
 
         <div class="upcoming-flight__route-line">
@@ -54,6 +57,7 @@ const formattedDate = computed(() => format(flight.date, 'EEEE, dd MMMM yyyy'))
         <div class="upcoming-flight__airport upcoming-flight__airport--end">
           <span class="upcoming-flight__code">{{ flight.arrival }}</span>
           <span class="upcoming-flight__city">{{ flight.arrivalCity }}</span>
+          <span class="upcoming-flight__airport-name">{{ flight.arrivalAirport }}</span>
         </div>
       </div>
 
@@ -152,6 +156,17 @@ const formattedDate = computed(() => format(flight.date, 'EEEE, dd MMMM yyyy'))
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100px;
+  }
+
+  &__airport-name {
+    font-size: 11px;
+    color: rgba($color-text-secondary, 0.7);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    margin-top: 2px;
   }
 
   &__route-line {
