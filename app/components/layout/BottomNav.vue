@@ -81,7 +81,8 @@ const isActive = (item: NavItem): boolean => {
       color: $color-navy;
     }
 
-    &--active {
+    &--active,
+    &--active:hover {
       color: $color-red;
     }
   }
